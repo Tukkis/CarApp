@@ -21,17 +21,18 @@ export default function Carlist() {
     }
 
     const columns = [
-        {headerName:"Brand", field:"brand"},
-        {headerName:"Model", field:"model"}
+        { headerName: 'Brand', field: 'brand0' },
+		{ headerName: 'Model', field: 'model' },
+		{ headerName: 'Color', field: 'color' },
+		{ headerName: 'Fuel', field: 'fuel' },
+		{ headerName: 'Year', field: 'year' }
     ]
 
     return (
-        <div className="ag-theme-alpine">
+        <div className="ag-theme-material" style={{ height: 650, width: 1400, margin: "auto" }}>
             <AgGridReact
 				rowData={cars}
 				columnDefs={columns}
-                pagination={true}
-				paginationPageSize={10}
 			>
 			</AgGridReact>
         </div>
